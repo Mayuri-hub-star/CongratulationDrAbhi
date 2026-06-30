@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Congratulations Dr. Abhishek Sutar</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#06142e,#0b2d63);
+overflow:hidden;
+height:100vh;
+color:white;
+text-align:center;
+}
+
+.screen{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+padding:20px;
+}
+
+.hidden{
+display:none;
+}
+
+#countdown{
+font-size:80px;
+font-weight:bold;
+color:#FFD700;
+margin-top:20px;
+}
+
+.profile{
+width:230px;
+height:230px;
+border-radius:50%;
+object-fit:cover;
+border:6px solid gold;
+box-shadow:0 0 30px gold;
+margin-bottom:20px;
+animation:zoomIn 2s ease;
+}
+
+h1{
+font-size:55px;
+color:#FFD700;
+margin-bottom:10px;
+}
+
+h2{
+font-size:38px;
+margin-bottom:10px;
+}
+
+h3{
+font-size:24px;
+color:#90EE90;
+margin-bottom:8px;
+}
+
+.message{
+max-width:900px;
+font-size:18px;
+line-height:1.8;
+margin-top:20px;
+}
+
+.signature{
+margin-top:30px;
+font-size:38px;
+color:#FFD700;
+font-weight:bold;
+}
+
+.balloon{
+position:absolute;
+bottom:-100px;
+font-size:40px;
+animation:float 12s linear infinite;
+}
+
+.spark{
+position:absolute;
+width:6px;
+height:6px;
+background:white;
+border-radius:50%;
+animation:blink 2s infinite;
+}
+
+@keyframes zoomIn{
+from{
+transform:scale(0);
+opacity:0;
+}
+to{
+transform:scale(1);
+opacity:1;
+}
+}
+
+@keyframes float{
+0%{
+transform:translateY(0);
+}
+100%{
+transform:translateY(-120vh);
+}
+}
+
+@keyframes blink{
+50%{
+opacity:0;
+}
+}
+
+.heart{
+font-size:50px;
+margin-top:20px;
+animation:beat 1s infinite;
+}
+
+@keyframes beat{
+50%{
+transform:scale(1.2);
+}
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="screen" id="intro">
+
+<h2>🎁 A Special Surprise Awaits...</h2>
+
+<div id="countdown">3</div>
+
+</div>
+
+<div class="screen hidden" id="main">
+
+<img src="abhishek.jpg" class="profile">
+
+<h1>🎉 Congratulations 🎉</h1>
+
+<h2>Dr. Abhishek Sutar</h2>
+
+<h3>🎓 Doctor of Philosophy (Ph.D.)</h3>
+
+<h3>Civil Engineering</h3>
+
+<h3>🏛️ IITRAM, Ahmedabad</h3>
+
+<div class="message">
+
+Every milestone is a testament to dedication, perseverance and hard work.
+
+Heartiest congratulations on earning your Doctor of Philosophy (Ph.D.) in Civil Engineering.
+
+Your remarkable achievement reflects years of commitment, passion and excellence.
+
+May this milestone open the doors to greater success, happiness and countless opportunities.
+
+✨ Wishing you a future filled with recognition, achievements and endless success. ✨
+
+</div>
+
+<div class="heart">❤️</div>
+
+<div class="signature">
+
+Yours,<br>
+Mayii ❤️
+
+</div>
+
+</div>
+
+<script>
+
+let count=3;
+
+let timer=setInterval(()=>{
+
+count--;
+
+document.getElementById("countdown").innerHTML=count;
+
+if(count==0){
+
+clearInterval(timer);
+
+document.getElementById("intro").style.display="none";
+
+document.getElementById("main").classList.remove("hidden");
+
+createConfetti();
+
+}
+
+},1000);
+
+function createConfetti(){
+
+for(let i=0;i<150;i++){
+
+let conf=document.createElement("div");
+
+conf.innerHTML="🎊";
+
+conf.style.position="absolute";
+
+conf.style.left=Math.random()*100+"vw";
+
+conf.style.top="-50px";
+
+conf.style.fontSize=(10+Math.random()*25)+"px";
+
+conf.style.animation="float "+(5+Math.random()*5)+"s linear";
+
+document.body.appendChild(conf);
+
+}
+
+}
+
+for(let i=0;i<15;i++){
+
+let b=document.createElement("div");
+
+b.className="balloon";
+
+b.innerHTML="🎈";
+
+b.style.left=Math.random()*100+"vw";
+
+b.style.animationDuration=(8+Math.random()*5)+"s";
+
+document.body.appendChild(b);
+
+}
+
+for(let i=0;i<80;i++){
+
+let s=document.createElement("div");
+
+s.className="spark";
+
+s.style.left=Math.random()*100+"vw";
+
+s.style.top=Math.random()*100+"vh";
+
+s.style.animationDelay=Math.random()*2+"s";
+
+document.body.appendChild(s);
+
+}
+
+</script>
+
+</body>
+</html>
