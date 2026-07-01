@@ -2,75 +2,156 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Congratulations Dr. Abhishek Sutar</title>
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif}
-body{background:linear-gradient(135deg,#071a3d,#0d2d69);overflow:hidden;color:#fff}
-#intro,#main{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:20px}
-.hidden{display:none}
-#count{font-size:100px;color:#ffd54a;font-weight:700}
-.profile{width:260px;height:330px;object-fit:cover;border-radius:20px;border:6px solid gold;box-shadow:0 0 30px gold}
-h1{font-size:64px;color:#ffd54a;margin:20px 0 10px}
-h2{font-size:42px}
-h3{font-size:28px;color:#97ff97;margin:8px 0}
-.msg{max-width:900px;font-size:22px;line-height:1.7;margin-top:20px}
-.sign{margin-top:25px;font-size:36px;color:#ffd54a;font-weight:700}
-.balloon,.star{position:absolute}
-.balloon{font-size:34px;animation:up linear infinite}
-.star{width:4px;height:4px;background:#fff;border-radius:50%;animation:blink 2s infinite}
-@keyframes up{from{transform:translateY(120vh)}to{transform:translateY(-130vh)}}
-@keyframes blink{50%{opacity:.2}}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#0b1f4d,#163f7a);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    color:white;
+    padding:20px;
+}
+
+.container{
+    max-width:900px;
+    width:100%;
+    text-align:center;
+}
+
+.profile{
+    width:250px;
+    height:320px;
+    object-fit:cover;
+    border-radius:20px;
+    border:5px solid gold;
+    box-shadow:0 0 20px rgba(255,215,0,.7);
+    margin-bottom:25px;
+}
+
+h1{
+    font-size:60px;
+    color:#FFD700;
+    margin-bottom:10px;
+}
+
+h2{
+    font-size:42px;
+    margin-bottom:12px;
+}
+
+.degree{
+    font-size:26px;
+    color:#8EF58E;
+    font-weight:600;
+    margin-bottom:8px;
+}
+
+.college{
+    font-size:24px;
+    color:#8EF58E;
+    margin-bottom:25px;
+}
+
+.message{
+    font-size:22px;
+    line-height:1.8;
+    max-width:850px;
+    margin:auto;
+}
+
+.from{
+    margin-top:35px;
+    font-size:28px;
+    color:#FFD700;
+    font-weight:bold;
+}
+
+@media(max-width:768px){
+
+.profile{
+    width:180px;
+    height:230px;
+}
+
+h1{
+    font-size:42px;
+}
+
+h2{
+    font-size:30px;
+}
+
+.degree,
+.college{
+    font-size:20px;
+}
+
+.message{
+    font-size:18px;
+}
+
+.from{
+    font-size:24px;
+}
+
+}
+
 </style>
+
 </head>
+
 <body>
-<div id="intro">
-<h2>🎁 A Special Surprise Awaits...</h2>
-<div id="count">3</div>
-</div>
 
-<div id="main" class="hidden">
-<img class="profile" src="abhishekphd.jpg" alt="Dr. Abhishek Sutar">
+<div class="container">
+
+<img src="abhishekphd.jpg" class="profile" alt="Dr. Abhishek Sutar">
+
 <h1>🎉 Congratulations 🎉</h1>
+
 <h2>Dr. Abhishek Sutar</h2>
-<h3>🎓 Doctor of Philosophy (Ph.D.)</h3>
-<h3>Civil Engineering</h3>
-<h3>🏛️ IITRAM, Ahmedabad</h3>
-<div class="msg">
-Heartiest congratulations on earning your Ph.D. in Civil Engineering.<br>
-Your dedication, perseverance and hard work have led to this remarkable milestone.<br>
-May your journey continue with greater success, happiness and endless achievements. ✨
-</div>
-<div class="sign">With Love,<br>Mayii ❤️</div>
+
+<div class="degree">🎓 Doctor of Philosophy (Ph.D.)</div>
+
+<div class="degree">Civil Engineering</div>
+
+<div class="college">🏛️ IITRAM, Ahmedabad</div>
+
+<div class="message">
+
+Heartiest congratulations on successfully earning your <b>Doctor of Philosophy (Ph.D.)</b> in Civil Engineering.
+
+Your dedication, perseverance and hard work have made this achievement possible.
+
+May this milestone bring you endless success, happiness and many more accomplishments in the years ahead.
+
+✨ Best Wishes for a Bright Future! ✨
+
 </div>
 
-<script>
-let c=3;
-let t=setInterval(()=>{
-document.getElementById("count").textContent=--c;
-if(c==0){
-clearInterval(t);
-intro.style.display="none";
-main.classList.remove("hidden");
-for(let i=0;i<20;i++){
-let b=document.createElement("div");
-b.className="balloon";
-b.innerHTML="🎈";
-b.style.left=Math.random()*100+"vw";
-b.style.animationDuration=(8+Math.random()*5)+"s";
-document.body.appendChild(b);
-}
-for(let i=0;i<100;i++){
-let s=document.createElement("div");
-s.className="star";
-s.style.left=Math.random()*100+"vw";
-s.style.top=Math.random()*100+"vh";
-s.style.animationDelay=Math.random()*2+"s";
-document.body.appendChild(s);
-}
-}
-},1000);
-</script>
+<div class="from">
+
+With Best Wishes ❤️<br>
+
+<b>Mayii</b>
+
+</div>
+
+</div>
+
 </body>
 </html>
